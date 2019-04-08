@@ -1,2 +1,2 @@
-# mermory_game
+# Memory Game
 Memory Game for Education
