@@ -1,0 +1,154 @@
+body {
+  background-color: #f9f7df;
+}
+#memory_game #content ul#card_list li {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 10px;
+}
+#memory_game #content ul#card_list li.front {
+  background-color: white;
+  background-image: url(../image/fruits.png);
+}
+#memory_game #content ul#card_list li.back {
+  background-image: url(../image/card_background.jpg);
+  background-size: 200%;
+  border-color: orange;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#memory_game {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#memory_game a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+#memory_game a:visited {
+  color: cornflowerblue;
+}
+#memory_game div#panel {
+  position: fixed;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #e4f1c2;
+}
+#memory_game div#panel h1 {
+  margin: 20px 0;
+}
+#memory_game div#panel h1 span {
+  display: block;
+}
+#memory_game div#panel nav ul {
+  list-style: none;
+}
+#memory_game div#panel nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+#memory_game div#panel nav ul li a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffa500;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+#memory_game div#panel nav ul li a:visited {
+  color: white;
+}
+#memory_game div#panel nav ul li a:hover {
+  background-color: #e69500;
+}
+#memory_game div#panel p {
+  margin: 20px 50px;
+}
+#memory_game div#panel div#score {
+  margin-top: 100px;
+  text-align: center;
+}
+#memory_game div#panel div#score table {
+  border: solid 1px white;
+  border-spacing: 0;
+  border-collapse: unset;
+  margin: 20px auto;
+  min-width: 250px;
+}
+#memory_game div#panel div#score table thead tr td {
+  font-size: 16px !important;
+  width: 50%;
+  background-color: white;
+  text-align: center;
+}
+#memory_game div#panel div#score table thead tr:first-child td {
+  text-align: center;
+  background-color: transparent;
+}
+#memory_game div#panel div#score table tr.won {
+  color: darkgreen;
+}
+#memory_game div#panel div#score table tr.lost {
+  color: #ffa500;
+}
+#memory_game div#panel div#score table tr td {
+  border: solid 1px white;
+  padding: 5px;
+  text-align: left;
+}
+#memory_game div#panel div#score table tr td.text-right {
+  text-align: right;
+}
+#memory_game div#panel div#score table tr:first-child td {
+  font-size: 25px;
+}
+#memory_game div#panel div#score table tr:nth-child(2) td {
+  font-size: 20px;
+}
+#memory_game div#content {
+  text-align: center;
+  margin-left: 440px;
+}
+#memory_game div#content ul#card_list {
+  max-width: 1000px;
+  margin: 0 auto;
+  list-style: none;
+}
+#memory_game div#content ul#card_list li {
+  display: inline-block;
+  opacity: 0.7;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#memory_game div#content ul#card_list li:hover {
+  opacity: 1;
+}
+#memory_game div#content ul#card_list li.front {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-color: white;
+  opacity: 1;
+}
+#memory_game div#content ul#card_list li.front.success {
+  border-color: darkgreen;
+}
+#memory_game div#content ul#card_list li.front.error {
+  border-color: red;
+}
+#memory_game div#content div#progress {
+  border: solid 1px #ffa500;
+  padding: 5px;
+  margin: 20px;
+}
+#memory_game div#content div#progress #time_elapsed {
+  background-color: #ffa500;
+  height: 20px;
+}

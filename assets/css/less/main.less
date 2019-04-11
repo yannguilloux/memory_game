@@ -1,0 +1,190 @@
+@import "theme/default";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#memory_game {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  a {
+    color: cornflowerblue;
+    text-decoration: none;
+
+    &:visited {
+      color: cornflowerblue;
+    }
+  }
+
+  div#panel {
+    position: fixed;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: @main-color;
+
+    h1 {
+      margin: 20px 0;
+      span{
+        display:block;
+      }
+    }
+
+    nav {
+
+      ul {
+        list-style: none;
+
+        li {
+          display: inline-block;
+          margin: 0 10px;
+
+          a {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: @second-color;
+            color: white;
+            transition: all 0.5s ease-in-out;
+
+            &:visited {
+              color: white;
+            }
+
+            &:hover {
+              background-color: darken(@second-color, 5%);
+            }
+          }
+        }
+      }
+    }
+
+    p{
+      margin: 20px 50px;
+
+    }
+
+    div#score {
+      margin-top: 100px;
+      text-align: center;
+
+      h2 {
+      }
+
+      table {
+        border: solid 1px white;
+        border-spacing: 0;
+        border-collapse: unset;
+        margin: 20px auto;
+        min-width:250px;
+
+        thead {
+          tr {
+            td {
+              font-size: 16px !important;
+              width:50%;
+              background-color: white;
+              text-align:center;
+            }
+          }
+
+          tr:first-child {
+            td {
+              text-align:center;
+              background-color: transparent;
+            }
+          }
+        }
+
+        tr {
+          &.won {
+            color: darkgreen;
+          }
+
+          &.lost {
+            color: @second-color;
+          }
+
+          td {
+            border: solid 1px white;
+            padding: 5px;
+            text-align: left;
+
+            &.text-right {
+              text-align: right;
+            }
+          }
+
+          &:first-child {
+            td {
+              font-size: 25px;
+            }
+          }
+
+          &:nth-child(2) {
+            td {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div#content {
+    text-align: center;
+    margin-left: 440px;
+
+    ul#card_list {
+      max-width: 1000px;
+      margin: 0 auto;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        opacity: 0.7;
+        cursor: pointer;
+        margin: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.front {
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-color: white;
+          opacity: 1;
+
+          &.success {
+            border-color: darkgreen;
+          }
+
+          &.error {
+            border-color: red;
+          }
+        }
+
+        &.back {
+        }
+      }
+    }
+
+    div#progress {
+      border: solid 1px @second-color;
+      padding: 5px;
+      margin: 20px;
+
+      #time_elapsed {
+        background-color: @second-color;
+        height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@main-color: #E4F1C2;
+@second-color: orange;
+
+body{
+  background-color: #f9f7df;
+}
+
+#memory_game {
+
+  #content {
+
+    ul#card_list {
+
+      li {
+        width: 100px;
+        height: 100px;
+        border-style: solid;
+        border-radius: 10px;
+        border-width: 10px;
+
+        &.front {
+          background-color: white;
+          background-image: url(../image/fruits.png);
+        }
+
+        &.back {
+          background-image: url(../image/card_background.jpg);
+          background-size: 200%;
+          border-color: orange;
+        }
+      }
+
+    }
+
+  }
+
+}
