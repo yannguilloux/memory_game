@@ -18,8 +18,6 @@ if ( ! empty($_POST['index'])) {
     header('Content-Type: text/html; charset=utf-8');
 }
 
-#16h
-
 
 // On implémente notre classe de jeu
 require_once('class/Memory_game.php');
